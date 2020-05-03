@@ -1,0 +1,7 @@
+runs/
+.idea
+*.npy
+*.zip
+*.txt
+!requirements.txt
+*.json
