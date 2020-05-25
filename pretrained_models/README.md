@@ -4,12 +4,34 @@ This directory contains the pre-trained models used to obtained the numbers in t
 during the code refactoring, we obtained different numbers - almost always better :) - from the ones in the original 
 paper:
 
-| <td colspan=2 style="text-align:center; font-weight:bold">BSK Offense<td colspan=2  style="text-align:center; font-weight:bold">BSK Defense <td colspan=2  style="text-align:center; font-weight:bold">Stanford Drone
-| --- | --: | --: | --: | --: | --: | --: | --: 
-| <td colspan=1 style="text-align:center; font-weight:bold">ADE <td colspan=1 style="text-align:center; font-weight:bold">FDE <td colspan=1 style="text-align:center; font-weight:bold">ADE <td colspan=1 style="text-align:center; font-weight:bold">FDE <td colspan=1 style="text-align:center; font-weight:bold">ADE <td colspan=1 style="text-align:center; font-weight:bold">FDE 
-| VRNN | 9,41 | 15,56 |  7,16 | 10,50 | 0,58  | 1,17 |
-| A-VRNN | 9,48 | 15,52 | 7,04  | 10,34 | 0,56  | 1,14 |
-| DAG-Net | <em>8,98</em> | <em>14,08</em> | <em>6,87</em> | <em>9,76</em> | <em>0,53</em>  | <em>1,04</em> |
+<table>
+<tbody>
+<tr>
+<th>
+<th align="center" colspan=2 style="text-align:center">Offense BSK</th>
+<th align="center" colspan=2 style="text-align:center">Defense BSK</th>
+<th align="center" colspan=2 style="text-align:center">Stanford Drone</th>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center" style="text-align:center; font-weight:bold">ADE</td>
+<td align="center" style="text-align:center; font-weight:bold">FDE</td>
+<td align="center" style="text-align:center; font-weight:bold">ADE</td>
+<td align="center" style="text-align:center; font-weight:bold">FDE</td>
+<td align="center" style="text-align:center; font-weight:bold">ADE</td>
+<td align="center" style="text-align:center; font-weight:bold">FDE</td>
+</tr>
+<tr>
+<td>VRNN</td>
+<td style="text-align:left">9,41</td>
+<td style="text-align:left">15,56</td>
+<td style="text-align:left">7,16</td>
+<td style="text-align:left">10,50</td>
+<td style="text-align:left">0,58</td>
+<td style="text-align:left">1,17</td>
+</tr>
+</tbody>
+</table>
 
 To evaluate again these models or use them as a starting point for further training, move the relative experiment in the
 correct `/runs/<model>` directory and run the relative script (see [models/README.md](./models/README.md) for more info).
