@@ -241,10 +241,11 @@ Main arguments:
 
 ## Evaluations
 To evaluate the results once completed the training phase, each of the previous models has its own .py scripts in its 
-directory.
+directory. Move in the specific model directory and run:
 ```
 python evaluate_bsk.py --run <expname> --best
 ```
+or
 ```
 python evaluate_sdd.py --run <expname> --best
 ```
