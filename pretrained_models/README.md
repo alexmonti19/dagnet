@@ -7,7 +7,7 @@ paper:
 <table>
     <tbody>
         <tr>
-            <th><\th>
+            <th>
             <th align="center" colspan=2 style="text-align:center">Offense BSK</th>
             <th align="center" colspan=2 style="text-align:center">Defense BSK</th>
             <th align="center" colspan=2 style="text-align:center">Stanford Drone</th>
@@ -23,30 +23,30 @@ paper:
         </tr>
         <tr>
             <td>VRNN</td>
-            <td style="text-align:left">9,41</td>
-            <td style="text-align:left">15,56</td>
-            <td style="text-align:left">7,16</td>
-            <td style="text-align:left">10,50</td>
-            <td style="text-align:left">0,58</td>
-            <td style="text-align:left">1,17</td>
+            <td style="text-align:center">9,41</td>
+            <td style="text-align:center">15,56</td>
+            <td style="text-align:center">7,16</td>
+            <td style="text-align:center">10,50</td>
+            <td style="text-align:center">0,58</td>
+            <td style="text-align:center">1,17</td>
         </tr>
         <tr>
             <td>A-VRNN</td>
-            <td style="text-align:left">9,48</td>
-            <td style="text-align:left">15,52</td>
-            <td style="text-align:left">7,05</td>
-            <td style="text-align:left">10,34</td>
-            <td style="text-align:left">0,56</td>
-            <td style="text-align:left">1,14</td>
+            <td style="text-align:center">9,48</td>
+            <td style="text-align:center">15,52</td>
+            <td style="text-align:center">7,05</td>
+            <td style="text-align:center">10,34</td>
+            <td style="text-align:center">0,56</td>
+            <td style="text-align:center">1,14</td>
         </tr>
         <tr>
             <td>DAG-Net</td>
-            <td style="text-align:left"><em>8,98</em></td>
-            <td style="text-align:left"><em>14,08</em></td>
-            <td style="text-align:left"><em>6,87</em></td>
-            <td style="text-align:left"><em>9,76</em></td>
-            <td style="text-align:left"><em>0,53</em></td>
-            <td style="text-align:left"><em>1,04</em></td>
+            <td style="text-align:center"><em>8,98</em></td>
+            <td style="text-align:center"><em>14,08</em></td>
+            <td style="text-align:center"><em>6,87</em></td>
+            <td style="text-align:center"><em>9,76</em></td>
+            <td style="text-align:center"><em>0,53</em></td>
+            <td style="text-align:center"><em>1,04</em></td>
         </tr>
     </tbody>
 </table>
