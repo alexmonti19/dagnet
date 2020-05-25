@@ -243,10 +243,10 @@ Main arguments:
 To evaluate the results once completed the training phase, each of the previous models has its own .py scripts in its 
 directory.
 ```
-python train_bsk.py --run <expname> --best
+python evaluate_bsk.py --run <expname> --best
 ```
 ```
-python train_sdd.py --run <expname> --best
+python evaluate_sdd.py --run <expname> --best
 ```
 
 Once having specified the experiment to evaluate with the ``--run`` argument (N.B. ``<expname>`` is the name of 
