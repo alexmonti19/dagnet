@@ -52,4 +52,4 @@ paper:
 </table>
 
 To evaluate again these models or use them as a starting point for further training, move the relative experiment in the
-correct `/runs/<model>` directory and run the relative script (see [models/README.md](./models/README.md) for more info).
+correct `/runs/<model>` directory and run the relative script (see [models/README.md](../models/README.md) for more info).
