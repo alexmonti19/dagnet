@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 ## Datasets
 Our proposal is general enough to be applied in different scenarios: the model achieves state-of-the-art results in both
-urban environments (*Stanford Drone Dataset*) and in sports applications (*STATS SportVU NBA Dataset*).   
+urban environments (*Stanford Drone Dataset*) and sports applications (*STATS SportVU NBA Dataset*).   
 
 For complete information on where to download and how to preprocess the datasets see the relative 
 [datasets/README.md](./datasets/README.md).
