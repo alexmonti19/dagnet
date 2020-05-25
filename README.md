@@ -10,13 +10,12 @@ The PyTorch official implementation for the paper:
 ## Model architecture
 The model is composed by three main components: the generative model (VRNN) and two graph neural networks.
 
-<img src="icpr.png" alt="icpr" width="600" align="center" />
+<img src="icpr.png" alt="icpr" width="600" style="align:center" />
  
 The first graph network operates on agents' goals, expressed as specific areas of the environment where agents 
 will land in the future. The second second graph network operates instead on single agents' hidden states, 
 which contain past motion behavioural information. The employing of two separate graph neural networks allows to consider 
 and share both past and future information while generating agents' future movements.
-
 
 
 ## Prerequisites

@@ -243,14 +243,15 @@ Main arguments:
 To evaluate the results once completed the training phase, each of the previous models has its own .py scripts in its 
 directory.
 ```
-python train_bsk.py --run <expname>
+python train_bsk.py --run <expname> --best
 ```
 ```
-python train_sdd.py --run <expname>
+python train_sdd.py --run <expname> --best
 ```
 
-Once having specified the experiment to evaluate with the ``--run`` argument, the script will automatically look for 
-the checkpoint to load inside the specific run directory. The user have three options:
+Once having specified the experiment to evaluate with the ``--run`` argument (N.B. ``<expname>`` is the name of 
+its directory inside ``\runs\<model>``), the script will automatically look for the relative checkpoint. The user have 
+three options:
 - Load the best checkpoint, by using the ``--best`` flag
-- Load a checkpoint from a specific epoch, by using the ``--epoch`` argument
+- Load a checkpoint from a specific epoch, by using the ``--epoch <epoch_number>`` argument
 - Let the model pick the last saved checkpoint, by specifying nothing
