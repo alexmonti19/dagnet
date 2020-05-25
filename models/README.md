@@ -6,7 +6,7 @@ The repo contains both the final model and the two ablation architectures cited 
 - *DAG-Net*: the complete architecture with two graphs
 
 Before launching the training scripts, make sure to have downloaded and preprocessed the datasets. See 
-[datasets/README.md](./datasets/README.md).
+[datasets/README.md](../datasets/README.md).
 
 
 
