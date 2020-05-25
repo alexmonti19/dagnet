@@ -253,6 +253,6 @@ python evaluate_sdd.py --run <expname> --best
 Once having specified the experiment to evaluate with the ``--run`` argument (N.B. ``<expname>`` is the name of 
 the experiment directory inside ``\runs\<model>``), the script will automatically look for the relative checkpoint. The user have 
 three options:
-- Load the best checkpoint, by using the ``--best`` flag
+- Load the best checkpoint, by using the ``--best`` flag (as above)
 - Load a checkpoint from a specific epoch, by using the ``--epoch <epoch_number>`` argument
 - Let the model pick the last saved checkpoint, by specifying nothing
