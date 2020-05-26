@@ -69,12 +69,11 @@ def compute_goals(args, paths):
     for split in ['train', 'validation', 'test']:
         filename = '{}/trajectories.npy'.format(paths[split])
         data = np.load(filename)
-        seqs, seq_len, _ = data.shape
-        goals = np.zeros((seqs, seq_len, args.n_agents))
+        seq_len, seqs, _ = data.shape
+        goals = np.zeros((seq_len, seqs))
 
         for sequence in tqdm(range(seqs), desc='Processing {}'.format(split)):
-            for agent in range(args.n_agents):
-                goals[sequence, :, agent] = goals_stationary(args, data[sequence, :, 2*agent:2*agent+2])
+            goals[:, sequence] = goals_stationary(args, data[:, sequence])
 
         save_filename = '{}/goals.npy'.format(paths[split])
         np.save(save_filename, goals)
@@ -111,15 +110,23 @@ def split_and_preprocess(args, paths):
     # preprocess
     dataset = np.delete(dataset, [2, 3], axis=3)    # keep only xy feature columns
     dataset[:, :, :, 0] = dataset[:, :, :, 0] - 45.0  # X coord: from 45<->90 to 0<->45
-    seqs, seq_len, agents, features = dataset.shape
-    dataset = dataset.reshape((seqs, seq_len, -1))    # (seqs, seq_len, player, xy) -> (seqs, seq_len, all_players_xy)
+    dataset = dataset.swapaxes(0, 1)
+    seq_len, seqs, players, features = dataset.shape
+    dataset = dataset.reshape((seq_len, -1, features))  # (seq_len, seqs, players, xy) -> (seq_len, seqs*players, xy)
+
+    # distinguish between different plays (every play is a batch of n (=players) consecutive trajectories)
+    idxs = [idx for idx in range(0, (seqs * players) + players, players)]
+    seq_start_end = [(start, end) for start, end in zip(idxs[:], idxs[1:])]
 
     # save splits
-    training_split_idx = ceil((float(seqs) / 100) * args.train_percentage)
-    validation_split_idx = ceil((float(seqs) / 100) * (args.validation_percentage + args.train_percentage))
-    np.save(paths['train'] / 'trajectories.npy', dataset[:training_split_idx, :, :])
-    np.save(paths['validation'] / 'trajectories.npy', dataset[training_split_idx:validation_split_idx, :, :])
-    np.save(paths['test'] / 'trajectories.npy', dataset[validation_split_idx:, :, :])
+    training_split_idx = ceil((float(len(seq_start_end)) / 100) * args.train_percentage)
+    validation_split_idx = ceil((float(len(seq_start_end)) / 100) * (args.validation_percentage + args.train_percentage))
+    train_end = seq_start_end[training_split_idx-1][1]
+    val_end = seq_start_end[validation_split_idx-1][1]
+
+    np.save(paths['train'] / 'trajectories.npy', dataset[:, :train_end, :])
+    np.save(paths['validation'] / 'trajectories.npy', dataset[:, train_end:val_end, :])
+    np.save(paths['test'] / 'trajectories.npy', dataset[:, val_end:, :])
 
 
 if __name__ == '__main__':

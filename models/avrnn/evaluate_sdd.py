@@ -136,8 +136,8 @@ def main(args):
     elif args.epoch is not None:
         # load checkpoint from specific epoch
         save = saves_dir.absolute() / 'checkpoint_epoch_{}.pth'.format(args.epoch)
-    if not pathlib.Path(save).is_file():
-        raise(Exception("Couldn't find a checkpoint for the specified epoch"))
+        if not pathlib.Path(save).is_file():
+            raise(Exception("Couldn't find a checkpoint for the specified epoch"))
     else:
         # load last checkpoint
         save = list(pathlib.Path(saves_dir).glob('*.pth'))[-1]
