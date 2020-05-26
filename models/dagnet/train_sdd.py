@@ -25,12 +25,12 @@ parser.add_argument('--num_workers', default=4, type=int, required=False, help='
 parser.add_argument('--obs_len', default=8, type=int, required=False, help='Timesteps of observation')
 parser.add_argument('--pred_len', default=12, type=int, required=False, help='Timesteps of prediction')
 parser.add_argument('--skip', default=1, type=int, required=False, help='Step for skipping frames')
-parser.add_argument('--goals_window', type=int, default=4, required=False, help='How many timesteps compute goals')
+parser.add_argument('--goals_window', type=int, default=3, required=False, help='How many timesteps compute goals')
 parser.add_argument('--n_cells_x', default=32, type=int, required=False, help='Grid cells (goals) along x')
 parser.add_argument('--n_cells_y', default=30, type=int, required=False, help='Grid cells (goals) along y')
 
 # Optimization options
-parser.add_argument('--learning_rate', default=5e-4, type=float, required=False, help='Initial learning rate')
+parser.add_argument('--learning_rate', default=1e-4, type=float, required=False, help='Initial learning rate')
 parser.add_argument('--lr_scheduler', default=False, action='store_true', required=False, help='Learning rate scheduling')
 parser.add_argument('--warmup', default=False, action='store_true', required=False, help='KLD warmup')
 parser.add_argument('--CE_weight', default=1, type=float, required=False, help='Cross-entropy loss weight')
@@ -39,7 +39,7 @@ parser.add_argument('--num_epochs', default=500, type=int, required=False, help=
 
 # Model
 parser.add_argument('--clip', default=10, type=int, required=False, help='Gradient clipping')
-parser.add_argument('--n_layers', default=1, type=int, required=False, help='Number of recurrent layers')
+parser.add_argument('--n_layers', default=2, type=int, required=False, help='Number of recurrent layers')
 parser.add_argument('--x_dim', default=2, type=int, required=False, help='Dimension of the input of the single agent')
 parser.add_argument('--h_dim', default=64, type=int, required=False, help='Dimension of the hidden layers')
 parser.add_argument('--z_dim', default=32, type=int, required=False, help='Dimension of the latent variables')
@@ -62,8 +62,8 @@ parser.add_argument('--alpha', type=float, default=0.2, help='Negative steep for
 # Miscellaneous
 parser.add_argument('--seed', default=128, type=int, required=False, help='PyTorch random seed')
 parser.add_argument('--print_every_batch', default=30, type=int, required=False, help='How many batches to print loss inside an epoch')
-parser.add_argument('--save_every', default=25, type=int, required=False, help='How often save model checkpoint')
-parser.add_argument('--eval_every', default=25, type=int, required=False, help='How often evaluate current model')
+parser.add_argument('--save_every', default=10, type=int, required=False, help='How often save model checkpoint')
+parser.add_argument('--eval_every', default=20, type=int, required=False, help='How often evaluate current model')
 parser.add_argument('--num_samples', default=20, type=int, required=False, help='Number of samples for evaluation')
 parser.add_argument('--run', required=True, type=str, help='Current run name')
 parser.add_argument('--resume', default=False, action='store_true', help='Resume from last saved checkpoint')

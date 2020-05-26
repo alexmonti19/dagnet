@@ -26,21 +26,21 @@ Main arguments:
 - `--pred_len`: Time-steps of prediction. Default is '40'.
 - `--players`: On which players the model has to focus. Choices: ``atk`` | ``def`` | ``all``.
 ###
-- `--learning_rate`: Initial learning rate. Default is '5e-4'.
+- `--learning_rate`: Initial learning rate.
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
-- `--batch_size`: Mini-batch size. Default is '64'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+- `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '50'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
@@ -53,21 +53,21 @@ Main arguments:
 - `--obs_len`: Time-steps of observation. Default is '8'.
 - `--pred_len`: Time-steps of prediction. Default is '12'.
 ###
-- `--learning_rate`: Initial learning rate. Default is '1e-3'.
+- `--learning_rate`: Initial learning rate.
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
-- `--batch_size`: Mini-batch size. Default is '16'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+- `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '50'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
@@ -90,29 +90,29 @@ Main arguments:
 - `--pred_len`: Time-steps of prediction. Default is '40'.
 - `--players`: On which players the model has to focus. Choices: ``atk`` | ``def`` | ``all``.
 ###
-- `--learning_rate`: Initial learning rate. Default is '5e-4'.
+- `--learning_rate`: Initial learning rate
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
-- `--batch_size`: Mini-batch size. Default is '64'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+- `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
 - `--graph_model`: Which type of Graph Neural Network to use. Choices: ``gat`` | ``gcn``.
 - `--graph_hid`: Graph hidden layer dimension. Default is '8'.
 - `--adjacency_type`: Type of adjacency matrix to describe the graph relations inside a scene. Choices: ``0`` 
 (binary fully-connected), ``1`` (distance similarity matrix), ``2`` (KNN similarity matrix). Default is '1'.
-- `--top_k_neigh`: Number of neighbours to consider when using the KNN similarity matrix. Default is '3'.
+- `--top_k_neigh`: Number of neighbours to consider when using the KNN similarity matrix.
 - `--n_heads`: Number of heads to use when employing GAT. Default is '4'.
-- `--alpha`: Negative step for the LeakyReLU activation inside GAT. Default is '2e-1'.
+- `--alpha`: Negative step for the LeakyReLU activation inside GAT.
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '25'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
@@ -125,17 +125,17 @@ Main arguments:
 - `--obs_len`: Time-steps of observation. Default is '8'.
 - `--pred_len`: Time-steps of prediction. Default is '12'.
 ###
-- `--learning_rate`: Initial learning rate. Default is '5e-4'.
+- `--learning_rate`: Initial learning rate.
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
-- `--batch_size`: Mini-batch size. Default is '64'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+- `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
 - `--graph_model`: Which type of Graph Neural Network to use. Choices: ``gat`` | ``gcn``.
 - `--graph_hid`: Graph hidden layer dimension. Default is '8'.
@@ -143,11 +143,11 @@ Main arguments:
 (binary fully-connected), ``1`` (distance similarity matrix), ``2`` (KNN similarity matrix). Default is '1'.
 - `--top_k_neigh`: Number of neighbours to consider when using the KNN similarity matrix. Default is '3'.
 - `--n_heads`: Number of heads to use when employing GAT. Default is '4'.
-- `--alpha`: Negative step for the LeakyReLU activation inside GAT. Default is '2e-1'.
+- `--alpha`: Negative step for the LeakyReLU activation inside GAT.
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '25'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
@@ -170,18 +170,18 @@ Main arguments:
 - `--pred_len`: Time-steps of prediction. Default is '40'.
 - `--players`: On which players the model has to focus. Choices: ``atk`` | ``def`` | ``all``.
 ###
-- `--learning_rate`: Initial learning rate. Default is '5e-4'.
+- `--learning_rate`: Initial learning rate.
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
 - `--CE_weight`: Cross-entropy weight for the training of the goals sampling module. Default is '1e-2'.
-- `--batch_size`: Mini-batch size. Default is '64'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+- `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
 - `--graph_model`: Which type of Graph Neural Network to use. Choices: ``gat`` | ``gcn``.
 - `--graph_hid`: Graph hidden layer dimension. Default is '8'.
@@ -189,11 +189,11 @@ Main arguments:
 (binary fully-connected), ``1`` (distance similarity matrix), ``2`` (KNN similarity matrix). Default is '1'.
 - `--top_k_neigh`: Number of neighbours to consider when using the KNN similarity matrix. Default is '3'.
 - `--n_heads`: Number of heads to use when employing GAT. Default is '4'.
-- `--alpha`: Negative step for the LeakyReLU activation inside GAT. Default is '2e-1'.
+- `--alpha`: Negative step for the LeakyReLU activation inside GAT.
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '25'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
@@ -209,18 +209,18 @@ Main arguments:
 - `--n_cells_x`: Number of cells (goals) along the x dimension. Default is '32'.
 - `--n_cells_y`: Number of cells (goals) along the y dimension. Default is '30'.
 ###
-- `--learning_rate`: Initial learning rate. Default is '5e-4'.
+- `--learning_rate`: Initial learning rate.
 - `--lr_scheduler`: Use the learning rate scheduling policy (ReduceOnPlateau). Default is 'False'.
 - `--warmup`: Warm-up the KLD in the early training epochs. Default is 'False'.
-- `--CE_weight`: Cross-entropy weight for the training of the goals sampling module. Default is '1e-2'.
-- `--batch_size`: Mini-batch size. Default is '64'.
-- `--num_epochs`: Training epochs. Default is '300'.
+- `--CE_weight`: Cross-entropy weight for the training of the goals sampling module. Default is '1
+- `--batch_size`: Mini-batch size.
+- `--num_epochs`: Training epochs.
 ###
-- `--n_layers`: Number of recurrent layers. Default is '1'.
-- `--x_dim`: Input examples size. Default is '2'.
-- `--h_dim`: Dimension of the hidden layers. Default is '64'.
-- `--z_dim`: Dimension of the latents variables. Default is '32'.
-- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s). Default is '64'.
+- `--n_layers`: Number of recurrent layers.
+ `--x_dim`: Input examples size.
+- `--h_dim`: Dimension of the hidden layers.
+- `--z_dim`: Dimension of the latents variables.
+- `--rnn_dim`: Dimensions of the hidden states of the recurrent cell(s).
 ###
 - `--graph_model`: Which type of Graph Neural Network to use. Choices: ``gat`` | ``gcn``.
 - `--graph_hid`: Graph hidden layer dimension. Default is '8'.
@@ -228,11 +228,11 @@ Main arguments:
 (binary fully-connected), ``1`` (distance similarity matrix), ``2`` (KNN similarity matrix). Default is '1'.
 - `--top_k_neigh`: Number of neighbours to consider when using the KNN similarity matrix. Default is '3'.
 - `--n_heads`: Number of heads to use when employing GAT. Default is '4'.
-- `--alpha`: Negative step for the LeakyReLU activation inside GAT. Default is '2e-1'.
+- `--alpha`: Negative step for the LeakyReLU activation inside GAT.
 ###
-- `--save_every`: Periodic checkpoint saving. Default is '25'.
-- `--eval_every`: Periodic model evaluation. Default is '20'.
-- `--num_samples`: Number of samples to evaluate model. Default is '20'.
+- `--save_every`: Periodic checkpoint saving.
+- `--eval_every`: Periodic model evaluation.
+- `--num_samples`: Number of samples to evaluate model.
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 

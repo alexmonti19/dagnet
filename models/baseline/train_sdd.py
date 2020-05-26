@@ -35,7 +35,7 @@ parser.add_argument('--clip', default=10, type=int, required=False, help='Gradie
 parser.add_argument('--n_layers', default=2, type=int, required=False, help='Number of recurrent layers')
 parser.add_argument('--x_dim', default=2, type=int, required=False, help='Dimension of the input of the single agent')
 parser.add_argument('--h_dim', default=64, type=int, required=False, help='Dimension of the hidden layers')
-parser.add_argument('--z_dim', default=32, type=int, required=False, help='Dimension of the latent variables')
+parser.add_argument('--z_dim', default=16, type=int, required=False, help='Dimension of the latent variables')
 parser.add_argument('--rnn_dim', default=64, type=int, required=False, help='Dimension of the recurrent layers')
 
 # Miscellaneous

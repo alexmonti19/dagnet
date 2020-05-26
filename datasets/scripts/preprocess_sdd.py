@@ -1,6 +1,7 @@
 import pathlib
 import numpy as np
 import math
+from tqdm import tqdm
 import json
 
 DATASET_DIR = pathlib.Path('.').absolute().parent / 'sdd'
@@ -16,7 +17,7 @@ def split():
     all_files = [file_path for file_path in SDD_RAW_DIR.iterdir()]
 
     file_data = []
-    for file in all_files:
+    for file in tqdm(all_files, desc='Reading files'):
         dname = file.name.split(".")[0]
         with open(file, 'r') as f:
             lines = []
@@ -27,7 +28,7 @@ def split():
             file_data.append((dname, np.stack(lines)))
 
     training_split, test_split, validation_split, all_data = [], [], [], []
-    for file in file_data:
+    for file in tqdm(file_data, desc='Preprocessing files'):
         scene_name = file[0]
         data = file[1]
         data_per_file = []
@@ -71,12 +72,15 @@ def split():
         validation_split.append((scene_name, np.concatenate(validation_test_split[:math.ceil(n_trjs*0.1)])))
         test_split.append((scene_name, np.concatenate(validation_test_split[math.ceil(n_trjs*0.1):])))
 
+    print('Splitting...')
     SDD_NPY_DIR.mkdir(exist_ok=True, parents=True)
+    print('Saving splits...')
     np.save('{}/{}'.format(SDD_NPY_DIR, 'all_data.npy'), np.asarray(all_data))
     np.save('{}/{}'.format(SDD_NPY_DIR, 'train.npy'), np.asarray(training_split))
     np.save('{}/{}'.format(SDD_NPY_DIR, 'test.npy'), np.asarray(test_split))
     np.save('{}/{}'.format(SDD_NPY_DIR, 'validation.npy'), np.asarray(validation_split))
 
+    print('Saving dataset stats...')
     stats_file.close()
     limits_json_full_path = DATASET_DIR.absolute() / 'limits.json'
     with open(limits_json_full_path, 'w+') as outfile:
@@ -85,6 +89,7 @@ def split():
 
 def main():
     split()
+    print('All done.')
 
 
 if __name__ == '__main__':

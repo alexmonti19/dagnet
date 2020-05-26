@@ -19,13 +19,13 @@ from models.utils.utils import relative_to_abs, average_displacement_error, fina
 parser = argparse.ArgumentParser()
 
 # Dataset options
-parser.add_argument('--num_workers', default=0, type=int, required=False, help='Number of workers for loading data')
+parser.add_argument('--num_workers', default=4, type=int, required=False, help='Number of workers for loading data')
 parser.add_argument('--obs_len', default=10, type=int, required=False, help='Timesteps of observation')
 parser.add_argument('--pred_len', default=40, type=int, required=False, help='Timesteps of prediction')
 parser.add_argument('--players', type=str, choices=['atk', 'def', 'all'], required=True, help='Which players to use')
 
 # Optimization options
-parser.add_argument('--learning_rate', default=5e-4, type=float, required=False, help='Initial learning rate')
+parser.add_argument('--learning_rate', default=1e-4, type=float, required=False, help='Initial learning rate')
 parser.add_argument('--lr_scheduler', default=False, action='store_true', required=False, help='Learning rate scheduling')
 parser.add_argument('--warmup', default=False, action='store_true', required=False, help='KLD warmup')
 parser.add_argument('--batch_size', default=64, type=int, required=False, help='Batch size')
@@ -43,7 +43,7 @@ parser.add_argument('--rnn_dim', default=64, type=int, required=False, help='Dim
 # Miscellaneous
 parser.add_argument('--seed', default=128, type=int, required=False, help='PyTorch random seed')
 parser.add_argument('--print_every_batch', default=30, type=int, required=False, help='How many batches to print the loss inside an epoch')
-parser.add_argument('--save_every', default=2, type=int, required=False, help='How often save model checkpoint')
+parser.add_argument('--save_every', default=50, type=int, required=False, help='How often save model checkpoint')
 parser.add_argument('--eval_every', default=20, type=int, required=False, help='How often evaluate current model')
 parser.add_argument('--num_samples', default=20, type=int, required=False, help='Number of samples for evaluation')
 parser.add_argument('--run', required=True, type=str, help='Current run name')
