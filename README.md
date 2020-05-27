@@ -1,5 +1,5 @@
 # DAG-Net
-The PyTorch official implementation for the paper:
+PyTorch code for:
 
 **DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting**  
 *<a href="https://github.com/alexmonti19">Alessio Monti</a>,
