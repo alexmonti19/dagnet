@@ -1,7 +1,7 @@
-# DAG-Net
+# DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting
 PyTorch code for:
 
-**DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting**  
+**<a href="https://arxiv.org/abs/2005.12661">DAG-Net: Double Attentive Graph Nerual Network for Trajectory Forecasting</a>**  
 *<a href="https://github.com/alexmonti19">Alessio Monti</a>,
 <a href="https://aimagelab.ing.unimore.it/imagelab/person.asp?idpersona=110">Alessia Bertugli</a>,
 <a href="https://aimagelab.ing.unimore.it/imagelab/person.asp?idpersona=38">Simone Calderara</a>,
