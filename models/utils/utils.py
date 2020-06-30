@@ -225,7 +225,7 @@ def compute_goals_fixed(tj, min_x, max_x, min_y, max_y, n_cells_x, n_cells_y, wi
     timesteps = len(tj)
     goals = np.zeros(timesteps)
     for t in reversed(range(timesteps)):
-        if (t + 1) % window == 0 or (t + 1) == T:
+        if (t + 1) % window == 0 or (t + 1) == timesteps:
             goals[t] = get_goal(tj[t], min_x, max_x, min_y, max_y, n_cells_x, n_cells_y)
         else:
             goals[t] = goals[t + 1]
