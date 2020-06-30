@@ -4,3 +4,5 @@
 *.txt
 !requirements.txt
 *.json
+__pycache__
+runs
