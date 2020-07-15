@@ -1,5 +1,5 @@
 # DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting
-PyTorch code for the [ICPR2020](https://www.micc.unifi.it/icpr2020/) paper:
+This repository contains the PyTorch code for the [ICPR2020](https://www.micc.unifi.it/icpr2020/) paper:
 
 **<a href="https://arxiv.org/abs/2005.12661">DAG-Net: Double Attentive Graph Nerual Network for Trajectory Forecasting</a>**  
 *<a href="https://github.com/alexmonti19">Alessio Monti</a>,
