@@ -68,6 +68,6 @@ If you find this repository useful for your research, please cite the following 
     title={DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting},
     author={Alessio Monti and Alessia Bertugli and Simone Calderara and Rita Cucchiara},
     booktitle = {25th International Conference on Pattern Recognition (ICPR)},
-    year={2020},
+    year={2020}
 }
 ```
