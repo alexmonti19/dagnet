@@ -63,7 +63,7 @@ If you have any questions, please contact [alessio.monti@unimore.it](mailto:ales
 [alessia.bertugli@unimore.it](mailto:alessia.bertugli@unimore.it), or open an issue on this repo. 
 
 If you find this repository useful for your research, please cite the following paper:
-```
+```bibtex
 @proceedings{monti2020dagnet,
     title={DAG-Net: Double Attentive Graph Neural Network for Trajectory Forecasting},
     author={Alessio Monti and Alessia Bertugli and Simone Calderara and Rita Cucchiara},
