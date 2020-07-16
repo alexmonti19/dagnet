@@ -11,6 +11,8 @@ This repository contains the PyTorch code for [ICPR 2020](https://www.micc.unifi
 The model is composed by three main components: the generative model (VRNN) and two graph neural networks.
 
 <img src="icpr.png" alt="icpr" width="600" style="align:center" />
+
+![dagnet - overview](icpr.png)
  
 The first graph network operates on agents' goals, expressed as specific areas of the environment where agents 
 will land in the future. The second second graph network operates instead on single agents' hidden states, 
