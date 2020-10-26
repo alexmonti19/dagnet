@@ -1,8 +1,6 @@
 ## Pre-trained models
 
-This directory contains the pre-trained models used to obtained the numbers in the paper. Because of some changes/fixes 
-during the code refactoring, we obtained different numbers - almost always better :) - from the ones in the original 
-paper:
+This directory contains the pre-trained models used to obtained the numbers in the paper.
 
 <table>
     <tbody>
