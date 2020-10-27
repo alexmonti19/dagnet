@@ -167,7 +167,7 @@ def main(args):
     model = DAGNet(args, n_max_agents).cuda()
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
-    loggin.info('Evaluating...')
+    logging.info('Evaluating...')
 
     ade, fde = evaluate(args, model, test_loader, args.num_samples)
 
