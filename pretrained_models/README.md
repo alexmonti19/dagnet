@@ -50,4 +50,4 @@ This directory contains the pre-trained models used to obtained the numbers in t
 </table>
 
 To evaluate again these models or use them as a starting point for further training, move the relative experiment in the
-correct `/runs/<model>` directory and run the relative script (see [models/README.md](../models/README.md) for more info).
+correct `/runs/<model>` directory and run the relative script (see [models/README.md](../models/README.md) for more info). Make sure to copy the entire `exp_***_best` directory, it already contains all the necessary files and subfolders.
