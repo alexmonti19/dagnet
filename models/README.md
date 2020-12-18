@@ -16,7 +16,7 @@ Before launching the training scripts, make sure to have downloaded and preproce
 The baseline is an implementation of the Variational Recurrent Neural Network from 
 [https://arxiv.org/pdf/1506.02216.pdf](https://arxiv.org/pdf/1506.02216.pdf).  
 
-### Training [bsk]
+### Training [NBA SportVU]
 ```
 python train_bsk.py --players [atk | def | all] --run <expname>
 ```
@@ -44,7 +44,7 @@ Main arguments:
 - `--run`: Experiment name.
 - `--resume`: Resume from last saved checkpoint.
 
-### Training [sdd]
+### Training [SDD]
 ```
 python train_sdd.py --run <expname>
 ```
@@ -256,3 +256,5 @@ three options:
 - Load the best checkpoint, by using the ``--best`` flag (as above)
 - Load a checkpoint from a specific epoch, by using the ``--epoch <epoch_number>`` argument
 - Let the model pick the last saved checkpoint, by specifying nothing
+
+NB: to evaluate our pre-trained models, always set the ``--best`` flag
