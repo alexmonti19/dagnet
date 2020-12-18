@@ -109,7 +109,7 @@ We also ship the checkpoints to reproduce the results presented in the paper.
 </table>
 
 For more information on how to test the models and produce the above results, see the relative 
-[models/README.md](./run/README.md).
+[models/README.md](./models/README.md).
 
 ## Cite
 If you have any questions, please contact [alessio.monti@unimore.it](mailto:alessio.monti@unimore.it) or 
