@@ -23,7 +23,7 @@ mccabe==0.6.1
 mkl-fft==1.0.15
 mkl-random==1.1.0
 mkl-service==2.3.0
-numpy==1.18.1
+numpy==1.21.0
 oauthlib==3.1.0
 olefile==0.46
 Pillow==8.3.2
